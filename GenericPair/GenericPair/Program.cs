@@ -10,11 +10,11 @@ namespace GenericPair
     {
         static void Main(string[] args)
         {
-            Pair<int, String> pair = Pair<int, string>.Of(1, "hello");
+            Pair<int, String> pair = Pair.Of(1, "hello");
             int i = pair.First; // 1
             String s = pair.Second; // "hello"
 
-            Pair<int, String> pair2 = Pair<int, string>.Of(1, "hello");
+            Pair<int, String> pair2 = Pair.Of(1, "hello");
             bool mustBeTrue = pair.Equals(pair2); // true!
             bool mustAlsoBeTrue = pair.GetHashCode() == pair2.GetHashCode(); // true!
 

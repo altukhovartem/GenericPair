@@ -56,7 +56,7 @@ namespace GenericPair
 
         }
     }
-
+    
     public static class Pair
     {
         public static Pair<T1, T2> Of<T1, T2>(T1 first, T2 second)
