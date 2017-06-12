@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace GenericPair
 {
-    public class Pair<T,K>
+    public class Pair<T, K>
     {
         private T _first;
         private K _second;
 
         public T First
         {
-            get { return _first; }        
+            get { return _first; }
         }
 
         public K Second
@@ -29,7 +29,7 @@ namespace GenericPair
 
         public static Pair<T, K> Of(T t, K k)
         {
-            return new Pair<T, K>(t,k);
+            return new Pair<T, K>(t, k);
         }
 
         public override int GetHashCode()
@@ -39,10 +39,10 @@ namespace GenericPair
 
         public override bool Equals(object obj)
         {
-            Pair<T,K > currentPair = null;
-            if (obj is Pair<T,K>)
+            Pair<T, K> currentPair = null;
+            if (obj is Pair<T, K>)
             {
-                currentPair = obj as Pair<T,K>;
+                currentPair = obj as Pair<T, K>;
                 if (this.GetHashCode() == currentPair.GetHashCode())
                 {
                     return true;
@@ -56,4 +56,13 @@ namespace GenericPair
 
         }
     }
+
+    public static class Pair
+    {
+        public static Pair<T1, T2> Of<T1, T2>(T1 first, T2 second)
+        {
+            return Pair<T1, T2>.Of(first, second);
+        }
+    }
+
 }
