@@ -43,7 +43,7 @@ namespace GenericPair
             if (obj is Pair<T, K>)
             {
                 currentPair = obj as Pair<T, K>;
-                if (this.GetHashCode() == currentPair.GetHashCode())
+                if (this.First.Equals(currentPair.First) && this.Second.Equals(currentPair.Second))
                 {
                     return true;
                 }
